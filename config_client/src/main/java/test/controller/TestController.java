@@ -11,9 +11,17 @@ public class TestController {
 
     @Value("${from:test}")
     private String from;
+    @Value("${name:name}")
+    private String name;
+
     @RequestMapping("/from")
     public String from() {
         return this.from;
+    }
+
+    @RequestMapping("/name")
+    public String name() {
+        return this.name;
     }
 
 }

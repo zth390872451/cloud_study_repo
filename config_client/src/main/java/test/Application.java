@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
 
  */
-//@EnableDiscoveryClient
+@EnableDiscoveryClient
 @SpringBootApplication
 @RequestMapping("/refreshScope")
 @RefreshScope//配置刷新
