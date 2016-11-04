@@ -3,8 +3,8 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>spring.cloud.study</artifactId>
-        <groupId>spring_cloud_study</groupId>
+        <artifactId>cloud.study.repo</artifactId>
+        <groupId>cloud_study_repo</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -13,11 +13,11 @@
     <artifactId>spring_cloud_registry01</artifactId>
 
     <dependencies>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka-server</artifactId>
@@ -29,7 +29,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Brixton.RELEASE</version>
+                <version>Camden.SR1</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
