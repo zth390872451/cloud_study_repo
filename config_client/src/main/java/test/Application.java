@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,8 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/refreshScope")
 @RefreshScope//配置刷新
 @RestController
+@EnableEurekaClient
 public class Application {
-    @Value("${name:test}")
+    @Value("${name}")
     private String name;
     @RequestMapping("/name")
     public String from() {
