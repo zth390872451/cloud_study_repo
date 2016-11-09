@@ -11,7 +11,8 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import java.net.UnknownHostException;
 
 /**
- * 服务注册中心01
+ * 服务注册中心03
+ *
  */
 @EnableEurekaServer
 @SpringBootApplication
