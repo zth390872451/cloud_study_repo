@@ -15,6 +15,11 @@
         <module>config_server02</module>
         <module>config_client</module>
         <module>spring_cloud_registry03</module>
+        <module>spring-ribbon-service</module>
+        <module>spring-cloud_compute01</module>
+        <module>spring-cloud_compute02</module>
+        <module>spring_feign_service</module>
+        <module>cloud_bus_amqp</module>
     </modules>
 
     <parent>

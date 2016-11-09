@@ -22,16 +22,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope//配置刷新
 @RestController
 @EnableEurekaClient
-public class Application {
+public class Config_Client {
     @Value("${name}")
     private String name;
     @RequestMapping("/name")
     public String from() {
         return this.name;
     }
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+    private static final Logger log = LoggerFactory.getLogger(Config_Client.class);
     public static void main(String[] args) {
-        ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(Application.class).web(true).run(args);;
+        ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(Config_Client.class).web(true).run(args);;
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
         String contextPath = environment.getProperty("server.context-path");
         String serverPort = environment.getProperty("server.port");

@@ -14,13 +14,13 @@ import java.net.UnknownHostException;
 /**
 
  */
-@EnableConfigServer //作为配置服务：管理git仓库
-@EnableDiscoveryClient //自身成为服务，配置多个，提高可用性
+@EnableConfigServer
+@EnableDiscoveryClient
 @SpringBootApplication
-public class Application {
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+public class ConfigServer02 {
+    private static final Logger log = LoggerFactory.getLogger(ConfigServer02.class);
     public static void main(String[] args) throws UnknownHostException {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(ConfigServer02.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
         String contextPath = environment.getProperty("server.context-path");
         String serverPort = environment.getProperty("server.port");

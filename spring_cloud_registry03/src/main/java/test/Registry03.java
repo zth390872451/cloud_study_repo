@@ -11,15 +11,16 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import java.net.UnknownHostException;
 
 /**
- * 服务注册中心01
+ * 服务注册中心03
+ *
  */
 @EnableEurekaServer
 @SpringBootApplication
-public class Application {
-    private static final Logger log = LoggerFactory.getLogger(Application.class);
+public class Registry03 {
+    private static final Logger log = LoggerFactory.getLogger(Registry03.class);
 
     public static void main(String[] args) throws UnknownHostException {
-        ConfigurableApplicationContext applicationContext = SpringApplication.run(Application.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(Registry03.class, args);
         ConfigurableEnvironment environment = applicationContext.getEnvironment();
         String contextPath = environment.getProperty("server.context-path");
         String serverPort = environment.getProperty("server.port");
